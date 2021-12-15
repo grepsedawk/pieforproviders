@@ -14,7 +14,7 @@ class UserPolicy < ApplicationPolicy
   class Scope < ApplicationScope
     def resolve
       if user.admin?
-        scope.all
+        scope.where(id: "44c3527a-b50f-4996-b947-6ed7725a8567")
       else
         scope.where(id: user.id).active
       end
